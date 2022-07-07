@@ -1,0 +1,26 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ChatServerPlayground</title>
+    <link href="{% static '/css/bootstrap.min.css' %}" rel="stylesheet">
+    <style type="text/css">
+      .main {
+        min-height: 100vh;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'header.html' %}
+    {% include 'base_css.html' %}
+    {% include 'base_js.html' %}
+    <div class="main">
+      {% block content %}{% endblock content %}
+    </div>
+    {% include 'footer.html' %}
+    <script src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>
